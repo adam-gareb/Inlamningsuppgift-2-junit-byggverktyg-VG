@@ -1,0 +1,23 @@
+När jag satte upp mitt gradle projekt, la klasserna i rätt mappstrukturer och skrev klart testklasserna så var det första kommandot som jag använde 'gradle build'.
+Gradle build gör en hel del saker. Bland annat skapar den en build katalog, och sedan kompilerar dina java klasser, som den sedan lägger in under build/classes. Sedan så testar den de kompilerade test klasserna.
+Den skapar dessutom också en JAR fil, som ligger under build/libs.
+
+
+Det förekom sedan att jag ville ta bort min build katalog och börja om från början, och då använde jag mig av kommandot 'gradle clean' för att uppnå det. Men jag såg till att skapa en ny build katalog lika snabbt, som kör tester och skapar en jar fil åt mig, så jag skrev kommandot såhär för att uppnå det:
+'gradle clean build'
+
+
+Jag har också använt mig av kommandot 'gradle javadoc'. Vad den gör är att skapa javadoc HTML och liknande under build/docs/javadoc. Man kan öppna index.html och se javadocen för alla dina klasser.
+
+
+Slutligen så använde jag mig av kommandot 'gradle run'. Detta kör main klassen som man har specificerat i build.gradle vart den ligger, med hjälp av "application {mainClass}". 
+I mitt fall så låg den under src/main/java/se/yrgo/models/ui. Man måste också ha lagt till "id 'application'" i plugins för att kunna använda sig av 'maven run'.
+
+
+
+
+Totalt alla gradle kommandon som jag använde:
+build
+clean
+javadoc
+run
