@@ -14,7 +14,6 @@ class BookTest {
 	//G
 	@Test
 	public void test2EqualBooks() {
-//        Book book = new Book("")
         assertEquals(book1, book2);
 	}
 
