@@ -19,9 +19,6 @@ public class BookCatalogTest {
 	}
 
 	//G
-    /**
-     * Testing to see if adding a book succeeded
-     */
 	@Test
 	public void testAddABook() {
         Book getFirstBook = bc.getBookArray()[0];
