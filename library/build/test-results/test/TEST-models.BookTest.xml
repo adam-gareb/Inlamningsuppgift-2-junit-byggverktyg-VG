@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="models.BookTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-11-23T20:28:02.658Z" hostname="WAHSHAKA" time="0.002">
+<testsuite name="models.BookTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-11-24T11:27:15.302Z" hostname="WAHSHAKA" time="0.003">
   <properties/>
   <testcase name="test2NonEqualBooks()" classname="models.BookTest" time="0.001"/>
   <testcase name="test2EqualBooks()" classname="models.BookTest" time="0.001"/>

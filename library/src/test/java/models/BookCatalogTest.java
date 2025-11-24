@@ -25,14 +25,14 @@ public class BookCatalogTest {
 	@Test
 	public void testAddABook() {
         Book getFirstBook = bc.getBookArray()[0];
-        assertEquals(book1, getFirstBook);
+        assertSame(book1, getFirstBook);
 	}
 
 	//G
 	@Test
 	public void testFindBook() {
         try {
-            assertEquals(book1, bc.findBook("Learning Java"));
+            assertSame(book1, bc.findBook("Learning Java"));
         } catch (BookNotFoundException e) {
             fail("Unexpected BookNotFoundException");
         }
@@ -42,7 +42,7 @@ public class BookCatalogTest {
 	@Test
 	public void testFindBookIgnoringCase() {
         try {
-            assertEquals(book1, bc.findBook("learning java"));
+            assertSame(book1, bc.findBook("learning java"));
         } catch (BookNotFoundException e) {
             fail("Unexpected BookNotFoundException");
         }
@@ -52,7 +52,7 @@ public class BookCatalogTest {
 	@Test
 	public void testFindBookWithExtraSpaces() {
         try {
-            assertEquals(book1, bc.findBook("  learning java   "));
+            assertSame(book1, bc.findBook("  learning java   "));
         } catch (BookNotFoundException e) {
             fail("Unexpected BookNotFoundException");
         }

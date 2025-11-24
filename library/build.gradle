@@ -25,3 +25,7 @@ test {
 application {
     mainClass = 'se.yrgo.ui.Main'
 }
+
+tasks.register("allCommands"){
+    dependsOn("build", "javadoc", "run")
+}

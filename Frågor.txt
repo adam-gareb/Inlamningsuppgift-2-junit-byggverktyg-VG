@@ -14,6 +14,11 @@ Slutligen så använde jag mig av kommandot 'gradle run'. Detta kör main klasse
 I mitt fall så låg den under src/main/java/se/yrgo/models/ui. Man måste också ha lagt till "id 'application'" i plugins för att kunna använda sig av 'maven run'.
 
 
+Jag la dessutom in det här i build.gradle:
+tasks.register("allCommands"){
+    dependsOn("build", "javadoc", "run")
+}
+Detta gör så att när man kör 'gradle allCommands' så kör den kommandona build, javadoc, run på en och samma gång.
 
 
 Totalt alla gradle kommandon som jag använde:
